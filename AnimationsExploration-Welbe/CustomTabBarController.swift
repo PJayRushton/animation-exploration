@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomTabBarController: UITabBarController, SegueHandlerType, UIViewControllerTransitioningDelegate {
+class CustomTabBarController: UITabBarController, SegueHandlerType {
     
     // MARK: - Enums
     
@@ -42,9 +42,13 @@ class CustomTabBarController: UITabBarController, SegueHandlerType, UIViewContro
     
     
     // MARK: - Public properties
-
+    
+    @IBOutlet var popUpView: PlusPopUpView!
     @IBOutlet var customTabBar: CustomTabBar!
     let animator = TransitionAnimationHelper()
+    
+    var isPoppedUp: Bool = false
+    
     
     // MARK: - Private properties
     
@@ -64,7 +68,7 @@ class CustomTabBarController: UITabBarController, SegueHandlerType, UIViewContro
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         var count = 0
         var customTabDataObjects = [TabDataObject]()
         while let tab = Tab(rawValue: count) {
@@ -74,6 +78,7 @@ class CustomTabBarController: UITabBarController, SegueHandlerType, UIViewContro
         customTabBar.dataObjects = customTabDataObjects
         tabBar.hidden = true
         displayCustomTabBar()
+        view.backgroundColor = .lightGrayColor()
     }
     
     
@@ -96,6 +101,12 @@ class CustomTabBarController: UITabBarController, SegueHandlerType, UIViewContro
         }
     }
     
+}
+
+
+// MARK: Transition Delegate
+extension CustomTabBarController: UIViewControllerTransitioningDelegate {
+    
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         let plusButton = customTabBar.buttons[2]
@@ -107,10 +118,9 @@ class CustomTabBarController: UITabBarController, SegueHandlerType, UIViewContro
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         animator.presenting = false
-        animator.originFrame = CGRectMake(300, 0, 0, 0)
         return animator
     }
-
+    
 }
 
 
@@ -130,7 +140,8 @@ extension CustomTabBarController: CustomTabBarDelegate {
                 selectedIndex = 1
             case .Plus:
                 selectedIndex = customSelectedIndex
-                performSegueWithIdentifier(SegueIdentifier.ShowPlusMenu, sender: self)
+                //                performSegueWithIdentifier(SegueIdentifier.ShowPlusMenu, sender: self)
+                animatePopUpView(up: !isPoppedUp)
             case .Groups:
                 selectedIndex = 2
             case .Settings:
@@ -139,6 +150,15 @@ extension CustomTabBarController: CustomTabBarDelegate {
         }
     }
     
+}
+
+extension CustomTabBarController: PopUpViewDelegate {
+    func buttonPressed(buttonType: PopUpButtonType) {
+        switch buttonType {
+        case .LeftButton, .MiddleButton, .RightButton:
+            print("Button pressed with Type: \(buttonType)")
+        }
+    }
 }
 
 
@@ -156,4 +176,19 @@ private extension CustomTabBarController {
         customTabBar.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor).active = true
     }
     
+    func animatePopUpView(up up: Bool) {
+        if up {
+            view.addSubview(popUpView)
+            popUpView.delegate = self
+//            popUpView.translatesAutoresizingMaskIntoConstraints = false
+            view.addConstraint(popUpView.heightAnchor.constraintEqualToConstant(100))
+            view.addConstraint(popUpView.widthAnchor.constraintEqualToAnchor(tabBar.widthAnchor))
+            view.addConstraint(popUpView.leadingAnchor.constraintEqualToAnchor(tabBar.leadingAnchor))
+            view.addConstraint(popUpView.trailingAnchor.constraintEqualToAnchor(tabBar.trailingAnchor))
+            view.addConstraint(popUpView.topAnchor.constraintEqualToAnchor(tabBar.bottomAnchor))
+        } else {
+            popUpView.removeFromSuperview()
+        }
+    }
+
 }

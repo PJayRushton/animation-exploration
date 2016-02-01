@@ -44,7 +44,7 @@ protocol CustomTabBarDelegate {
         }
     }
     
-    @IBInspectable var accentColor: UIColor = .redColor() {
+    @IBInspectable var accentColor: UIColor = .welbePink() {
         didSet {
             updateColors()
         }
@@ -274,7 +274,7 @@ class TabButton: UIView {
             updateColors()
         }
     }
-    var selectedColor: UIColor = .redColor() {
+    var selectedColor: UIColor = .welbePink() {
         didSet {
             updateColors()
         }
@@ -350,7 +350,7 @@ private extension TabButton {
     func updateColors() {
         titleLabel.textColor = selected ? selectedColor : unselectedColor
         if let plusImageString = CustomTabBarController.Tab.Plus.dataObject.imageName where imageView.image == UIImage(named: plusImageString) {
-            imageView.tintColor = UIColor.redColor()
+            imageView.tintColor = UIColor.welbePink()
         } else {
             imageView.tintColor = selected ? selectedColor : unselectedColor
         }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36134AE71C5FD9C8002D61D0 /* PlusPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36134AE61C5FD9C8002D61D0 /* PlusPopUpView.swift */; };
+		36134AE91C5FD9E4002D61D0 /* PlusPopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36134AE81C5FD9E4002D61D0 /* PlusPopUpView.xib */; };
+		36134AEB1C5FE2E3002D61D0 /* UIColor+Welbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36134AEA1C5FE2E2002D61D0 /* UIColor+Welbe.swift */; };
 		A19CC9061C5D1B800004AC5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19CC9051C5D1B800004AC5F /* AppDelegate.swift */; };
 		A19CC9081C5D1B800004AC5F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19CC9071C5D1B800004AC5F /* FirstViewController.swift */; };
 		A19CC90A1C5D1B800004AC5F /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19CC9091C5D1B800004AC5F /* PlusViewController.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36134AE61C5FD9C8002D61D0 /* PlusPopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusPopUpView.swift; sourceTree = "<group>"; };
+		36134AE81C5FD9E4002D61D0 /* PlusPopUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlusPopUpView.xib; sourceTree = "<group>"; };
+		36134AEA1C5FE2E2002D61D0 /* UIColor+Welbe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Welbe.swift"; sourceTree = "<group>"; };
 		A19CC9021C5D1B800004AC5F /* AnimationsExploration-Welbe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnimationsExploration-Welbe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19CC9051C5D1B800004AC5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A19CC9071C5D1B800004AC5F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -65,13 +71,16 @@
 			isa = PBXGroup;
 			children = (
 				A19CC9051C5D1B800004AC5F /* AppDelegate.swift */,
+				A19CC90B1C5D1B800004AC5F /* Main.storyboard */,
 				A19CC9191C5D1D390004AC5F /* CustomTabBarController.swift */,
 				A19CC91A1C5D1D390004AC5F /* CustomTabBar.swift */,
 				A19CC91D1C5D1D5D0004AC5F /* SegueHandlerType.swift */,
 				A19CC9071C5D1B800004AC5F /* FirstViewController.swift */,
 				A19CC9091C5D1B800004AC5F /* PlusViewController.swift */,
 				A19CC9411C5D3EB30004AC5F /* TransitionAnimationHelper.swift */,
-				A19CC90B1C5D1B800004AC5F /* Main.storyboard */,
+				36134AEA1C5FE2E2002D61D0 /* UIColor+Welbe.swift */,
+				36134AE61C5FD9C8002D61D0 /* PlusPopUpView.swift */,
+				36134AE81C5FD9E4002D61D0 /* PlusPopUpView.xib */,
 				A19CC90E1C5D1B800004AC5F /* Assets.xcassets */,
 				A19CC9101C5D1B800004AC5F /* LaunchScreen.storyboard */,
 				A19CC9131C5D1B800004AC5F /* Info.plist */,
@@ -138,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A19CC9121C5D1B800004AC5F /* LaunchScreen.storyboard in Resources */,
+				36134AE91C5FD9E4002D61D0 /* PlusPopUpView.xib in Resources */,
 				A19CC90F1C5D1B800004AC5F /* Assets.xcassets in Resources */,
 				A19CC90D1C5D1B800004AC5F /* Main.storyboard in Resources */,
 			);
@@ -150,7 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36134AEB1C5FE2E3002D61D0 /* UIColor+Welbe.swift in Sources */,
 				A19CC9421C5D3EB30004AC5F /* TransitionAnimationHelper.swift in Sources */,
+				36134AE71C5FD9C8002D61D0 /* PlusPopUpView.swift in Sources */,
 				A19CC90A1C5D1B800004AC5F /* PlusViewController.swift in Sources */,
 				A19CC91C1C5D1D390004AC5F /* CustomTabBar.swift in Sources */,
 				A19CC9061C5D1B800004AC5F /* AppDelegate.swift in Sources */,
@@ -304,6 +316,7 @@
 				A19CC9181C5D1B800004AC5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
