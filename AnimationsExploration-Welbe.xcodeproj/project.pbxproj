@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A19CC9061C5D1B800004AC5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19CC9051C5D1B800004AC5F /* AppDelegate.swift */; };
+		A19CC9081C5D1B800004AC5F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19CC9071C5D1B800004AC5F /* FirstViewController.swift */; };
+		A19CC90A1C5D1B800004AC5F /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19CC9091C5D1B800004AC5F /* PlusViewController.swift */; };
+		A19CC90D1C5D1B800004AC5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A19CC90B1C5D1B800004AC5F /* Main.storyboard */; };
+		A19CC90F1C5D1B800004AC5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A19CC90E1C5D1B800004AC5F /* Assets.xcassets */; };
+		A19CC9121C5D1B800004AC5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A19CC9101C5D1B800004AC5F /* LaunchScreen.storyboard */; };
+		A19CC91B1C5D1D390004AC5F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19CC9191C5D1D390004AC5F /* CustomTabBarController.swift */; };
+		A19CC91C1C5D1D390004AC5F /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19CC91A1C5D1D390004AC5F /* CustomTabBar.swift */; };
+		A19CC91E1C5D1D5D0004AC5F /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19CC91D1C5D1D5D0004AC5F /* SegueHandlerType.swift */; };
+		A19CC9421C5D3EB30004AC5F /* TransitionAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19CC9411C5D3EB30004AC5F /* TransitionAnimationHelper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A19CC9021C5D1B800004AC5F /* AnimationsExploration-Welbe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnimationsExploration-Welbe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A19CC9051C5D1B800004AC5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A19CC9071C5D1B800004AC5F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		A19CC9091C5D1B800004AC5F /* PlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
+		A19CC90C1C5D1B800004AC5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A19CC90E1C5D1B800004AC5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A19CC9111C5D1B800004AC5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A19CC9131C5D1B800004AC5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A19CC9191C5D1D390004AC5F /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		A19CC91A1C5D1D390004AC5F /* CustomTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		A19CC91D1C5D1D5D0004AC5F /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
+		A19CC9411C5D3EB30004AC5F /* TransitionAnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimationHelper.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A19CC8FF1C5D1B800004AC5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A19CC8F91C5D1B800004AC5F = {
+			isa = PBXGroup;
+			children = (
+				A19CC9041C5D1B800004AC5F /* AnimationsExploration-Welbe */,
+				A19CC9031C5D1B800004AC5F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A19CC9031C5D1B800004AC5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A19CC9021C5D1B800004AC5F /* AnimationsExploration-Welbe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A19CC9041C5D1B800004AC5F /* AnimationsExploration-Welbe */ = {
+			isa = PBXGroup;
+			children = (
+				A19CC9051C5D1B800004AC5F /* AppDelegate.swift */,
+				A19CC9191C5D1D390004AC5F /* CustomTabBarController.swift */,
+				A19CC91A1C5D1D390004AC5F /* CustomTabBar.swift */,
+				A19CC91D1C5D1D5D0004AC5F /* SegueHandlerType.swift */,
+				A19CC9071C5D1B800004AC5F /* FirstViewController.swift */,
+				A19CC9091C5D1B800004AC5F /* PlusViewController.swift */,
+				A19CC9411C5D3EB30004AC5F /* TransitionAnimationHelper.swift */,
+				A19CC90B1C5D1B800004AC5F /* Main.storyboard */,
+				A19CC90E1C5D1B800004AC5F /* Assets.xcassets */,
+				A19CC9101C5D1B800004AC5F /* LaunchScreen.storyboard */,
+				A19CC9131C5D1B800004AC5F /* Info.plist */,
+			);
+			path = "AnimationsExploration-Welbe";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A19CC9011C5D1B800004AC5F /* AnimationsExploration-Welbe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A19CC9161C5D1B800004AC5F /* Build configuration list for PBXNativeTarget "AnimationsExploration-Welbe" */;
+			buildPhases = (
+				A19CC8FE1C5D1B800004AC5F /* Sources */,
+				A19CC8FF1C5D1B800004AC5F /* Frameworks */,
+				A19CC9001C5D1B800004AC5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AnimationsExploration-Welbe";
+			productName = "AnimationsExploration-Welbe";
+			productReference = A19CC9021C5D1B800004AC5F /* AnimationsExploration-Welbe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A19CC8FA1C5D1B800004AC5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = AppsByPJ;
+				TargetAttributes = {
+					A19CC9011C5D1B800004AC5F = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = A19CC8FD1C5D1B800004AC5F /* Build configuration list for PBXProject "AnimationsExploration-Welbe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A19CC8F91C5D1B800004AC5F;
+			productRefGroup = A19CC9031C5D1B800004AC5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A19CC9011C5D1B800004AC5F /* AnimationsExploration-Welbe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A19CC9001C5D1B800004AC5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A19CC9121C5D1B800004AC5F /* LaunchScreen.storyboard in Resources */,
+				A19CC90F1C5D1B800004AC5F /* Assets.xcassets in Resources */,
+				A19CC90D1C5D1B800004AC5F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A19CC8FE1C5D1B800004AC5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A19CC9421C5D3EB30004AC5F /* TransitionAnimationHelper.swift in Sources */,
+				A19CC90A1C5D1B800004AC5F /* PlusViewController.swift in Sources */,
+				A19CC91C1C5D1D390004AC5F /* CustomTabBar.swift in Sources */,
+				A19CC9061C5D1B800004AC5F /* AppDelegate.swift in Sources */,
+				A19CC91B1C5D1D390004AC5F /* CustomTabBarController.swift in Sources */,
+				A19CC91E1C5D1D5D0004AC5F /* SegueHandlerType.swift in Sources */,
+				A19CC9081C5D1B800004AC5F /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A19CC90B1C5D1B800004AC5F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A19CC90C1C5D1B800004AC5F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A19CC9101C5D1B800004AC5F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A19CC9111C5D1B800004AC5F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A19CC9141C5D1B800004AC5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A19CC9151C5D1B800004AC5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A19CC9171C5D1B800004AC5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "AnimationsExploration-Welbe/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AppsByPJ.AnimationsExploration-Welbe";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A19CC9181C5D1B800004AC5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "AnimationsExploration-Welbe/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AppsByPJ.AnimationsExploration-Welbe";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A19CC8FD1C5D1B800004AC5F /* Build configuration list for PBXProject "AnimationsExploration-Welbe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A19CC9141C5D1B800004AC5F /* Debug */,
+				A19CC9151C5D1B800004AC5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A19CC9161C5D1B800004AC5F /* Build configuration list for PBXNativeTarget "AnimationsExploration-Welbe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A19CC9171C5D1B800004AC5F /* Debug */,
+				A19CC9181C5D1B800004AC5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A19CC8FA1C5D1B800004AC5F /* Project object */;
+}
