@@ -10,6 +10,9 @@ import UIKit
 
 class PlusViewController: UIViewController {
 
+    @IBOutlet weak var fakeCircleImageView: UIImageView!
+    @IBOutlet weak var addButtonView: UIButton!
+
     @IBAction func dismissButtonPressed(sender: AnyObject) {
         presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -17,10 +20,13 @@ class PlusViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        view.backgroundColor = .welbePink()
-
+        fakeCircleImageView.image = UIImage(named: "add")?.imageWithRenderingMode(.AlwaysTemplate)
+        fakeCircleImageView.tintColor = UIColor(hex: 0xff66a3)
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("Going to controller: \(segue.destinationViewController)")
+    }
 
 }
 

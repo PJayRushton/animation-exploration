@@ -45,7 +45,7 @@ class CustomTabBarController: UITabBarController, SegueHandlerType {
     
     @IBOutlet var popUpView: PlusPopUpView!
     @IBOutlet var customTabBar: CustomTabBar!
-    let animator = TransitionAnimationHelper()
+    let animator = PinkAnimationController()
     
     var isPoppedUp: Bool = false
     
@@ -96,6 +96,7 @@ class CustomTabBarController: UITabBarController, SegueHandlerType {
             if let plusViewController = segue.destinationViewController as? PlusViewController {
                 plusViewController.transitioningDelegate = self
             }
+            break
         case .ShowLogin:
             break
         }
@@ -109,10 +110,9 @@ extension CustomTabBarController: UIViewControllerTransitioningDelegate {
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        let plusButton = customTabBar.buttons[2]
-        animator.originFrame = self.view.superview!.convertRect(plusButton.frame, toView: nil)
+        animator.snapshotView = source.view.snapshotViewAfterScreenUpdates(false)
         animator.presenting = true
-        
+
         return animator
     }
     

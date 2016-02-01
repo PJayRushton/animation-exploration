@@ -20,6 +20,7 @@
 		A19CC91C1C5D1D390004AC5F /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19CC91A1C5D1D390004AC5F /* CustomTabBar.swift */; };
 		A19CC91E1C5D1D5D0004AC5F /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19CC91D1C5D1D5D0004AC5F /* SegueHandlerType.swift */; };
 		A19CC9421C5D3EB30004AC5F /* TransitionAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19CC9411C5D3EB30004AC5F /* TransitionAnimationHelper.swift */; };
+		B0049D8C1C60099500DD165C /* PinkAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0049D8B1C60099500DD165C /* PinkAnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		A19CC91A1C5D1D390004AC5F /* CustomTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		A19CC91D1C5D1D5D0004AC5F /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
 		A19CC9411C5D3EB30004AC5F /* TransitionAnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimationHelper.swift; sourceTree = "<group>"; };
+		B0049D8B1C60099500DD165C /* PinkAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinkAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				A19CC9071C5D1B800004AC5F /* FirstViewController.swift */,
 				A19CC9091C5D1B800004AC5F /* PlusViewController.swift */,
 				A19CC9411C5D3EB30004AC5F /* TransitionAnimationHelper.swift */,
+				B0049D8B1C60099500DD165C /* PinkAnimationController.swift */,
 				36134AEA1C5FE2E2002D61D0 /* UIColor+Welbe.swift */,
 				36134AE61C5FD9C8002D61D0 /* PlusPopUpView.swift */,
 				36134AE81C5FD9E4002D61D0 /* PlusPopUpView.xib */,
@@ -166,6 +169,7 @@
 				A19CC90A1C5D1B800004AC5F /* PlusViewController.swift in Sources */,
 				A19CC91C1C5D1D390004AC5F /* CustomTabBar.swift in Sources */,
 				A19CC9061C5D1B800004AC5F /* AppDelegate.swift in Sources */,
+				B0049D8C1C60099500DD165C /* PinkAnimationController.swift in Sources */,
 				A19CC91B1C5D1D390004AC5F /* CustomTabBarController.swift in Sources */,
 				A19CC91E1C5D1D5D0004AC5F /* SegueHandlerType.swift in Sources */,
 				A19CC9081C5D1B800004AC5F /* FirstViewController.swift in Sources */,

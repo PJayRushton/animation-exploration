@@ -64,10 +64,10 @@
                             </userDefinedRuntimeAttributes>
                             <variation key="default">
                                 <mask key="constraints">
+                                    <exclude reference="Swl-WR-SYt"/>
                                     <exclude reference="WJa-gJ-5rp"/>
                                     <exclude reference="Yhg-k1-mTd"/>
                                     <exclude reference="zQj-kP-fHJ"/>
-                                    <exclude reference="Swl-WR-SYt"/>
                                 </mask>
                             </variation>
                         </view>
@@ -178,10 +178,10 @@
                             </userDefinedRuntimeAttributes>
                             <variation key="default">
                                 <mask key="constraints">
-                                    <exclude reference="b4N-Pz-UnR"/>
-                                    <exclude reference="4u9-ZJ-m0x"/>
-                                    <exclude reference="iVo-ZO-6se"/>
                                     <exclude reference="2Vy-bO-CUl"/>
+                                    <exclude reference="4u9-ZJ-m0x"/>
+                                    <exclude reference="b4N-Pz-UnR"/>
+                                    <exclude reference="iVo-ZO-6se"/>
                                 </mask>
                             </variation>
                         </view>
