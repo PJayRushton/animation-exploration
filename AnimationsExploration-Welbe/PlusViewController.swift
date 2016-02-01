@@ -10,20 +10,24 @@ import UIKit
 
 class PlusViewController: UIViewController {
 
+    @IBOutlet weak var firstButton: UIButton!
+    @IBOutlet weak var secondButton: UIButton!
+    @IBOutlet weak var thirdButton: UIButton!
+    
     @IBOutlet weak var fakeCircleImageView: UIImageView!
-    @IBOutlet weak var addButtonView: UIButton!
+    @IBOutlet weak var plusButton: UIButton!
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        plusButton.clipsToBounds = true
+    }
 
     @IBAction func dismissButtonPressed(sender: AnyObject) {
         presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        fakeCircleImageView.image = UIImage(named: "add")?.imageWithRenderingMode(.AlwaysTemplate)
-        fakeCircleImageView.tintColor = UIColor(hex: 0xff66a3)
-    }
-
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("Going to controller: \(segue.destinationViewController)")
     }

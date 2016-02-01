@@ -12,7 +12,7 @@ import UIKit
 
 class PinkAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
 
-    let duration = 2.0
+    let duration = 0.3
 
     var presenting = true
     var originFrame = CGRect.zero
@@ -33,20 +33,26 @@ class PinkAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
         // TODO: Return is probably bad here
         guard let plusVC = presentedVC as? PlusViewController else { return }
 
+        plusVC.fakeCircleImageView.alpha = presenting ? 0 : 1
+        plusVC.firstButton.alpha = presenting ? 0 : 1
+        plusVC.secondButton.alpha = presenting ? 0 : 1
+        plusVC.thirdButton.alpha = presenting ? 0 : 1
+        
         if let snapshotView = snapshotView where presenting {
-            plusVC.fakeCircleImageView.alpha = 0
             containerView?.insertSubview(snapshotView, aboveSubview: fromView)
             containerView?.insertSubview(toView, aboveSubview: snapshotView)
         } else {
-            plusVC.fakeCircleImageView.alpha = 1
             containerView?.insertSubview(toView, belowSubview: fromView)
         }
+        
         UIView.animateWithDuration(duration, animations: {
-            if self.presenting {
-                plusVC.fakeCircleImageView.alpha = 1
-            } else {
-                plusVC.fakeCircleImageView.alpha = 0
-            }
+            let alpha: CGFloat = self.presenting ? 1 : 0
+            plusVC.fakeCircleImageView.alpha = alpha
+            plusVC.firstButton.alpha = alpha
+            plusVC.secondButton.alpha = alpha
+            plusVC.thirdButton.alpha = alpha
+            let rotation = self.presenting ? CGAffineTransformMakeRotation(CGFloat(M_PI_4)) : CGAffineTransformIdentity
+            plusVC.plusButton.transform = rotation
         }) { completed in
             transitionContext.completeTransition(true)
         }

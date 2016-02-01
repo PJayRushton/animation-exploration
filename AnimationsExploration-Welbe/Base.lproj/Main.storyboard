@@ -59,32 +59,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="lkE-dI-F6C">
-                                <rect key="frame" x="-188" y="526" width="750" height="750"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pinkCircle" translatesAutoresizingMaskIntoConstraints="NO" id="lkE-dI-F6C">
+                                <rect key="frame" x="-188.5" y="526" width="752" height="310"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="lkE-dI-F6C" secondAttribute="height" multiplier="1:1" id="KIN-cx-gDU"/>
-                                    <constraint firstAttribute="height" constant="750" id="enN-hr-iHo"/>
-                                    <constraint firstAttribute="width" constant="750" id="fY5-Bd-Q2j"/>
+                                    <constraint firstAttribute="width" secondItem="lkE-dI-F6C" secondAttribute="height" multiplier="1:1" constant="442" id="KIN-cx-gDU"/>
+                                    <constraint firstAttribute="height" constant="310" id="enN-hr-iHo"/>
+                                    <constraint firstAttribute="width" constant="752" id="fY5-Bd-Q2j"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KIN-cx-gDU"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBu-0H-PFT">
-                                <rect key="frame" x="45" y="562" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="69" y="561" width="30" height="30"/>
+                                <state key="normal" title="11">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnG-hI-8hf">
-                                <rect key="frame" x="164" y="545" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="172" y="544" width="30" height="30"/>
+                                <state key="normal" title="22">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="dfv-h9-VXX" kind="presentation" id="Emy-O8-Lus"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e57-CI-XcF">
-                                <rect key="frame" x="287" y="567" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="279" y="566" width="30" height="30"/>
+                                <state key="normal" title="33">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtv-oc-eFr">
-                                <rect key="frame" x="167" y="624" width="40" height="40"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtv-oc-eFr">
+                                <rect key="frame" x="167" y="623" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="dlr-bg-v77"/>
                                     <constraint firstAttribute="width" constant="40" id="lOw-sN-8gb"/>
@@ -99,9 +111,10 @@
                         <constraints>
                             <constraint firstItem="e57-CI-XcF" firstAttribute="top" secondItem="tnG-hI-8hf" secondAttribute="bottom" constant="-8" id="1iS-W2-fwN"/>
                             <constraint firstItem="e57-CI-XcF" firstAttribute="leading" secondItem="tnG-hI-8hf" secondAttribute="trailing" constant="77" id="3bj-XG-KLE"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Mtv-oc-eFr" secondAttribute="bottom" constant="3" id="62K-XL-8D8"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Mtv-oc-eFr" secondAttribute="bottom" constant="4" id="62K-XL-8D8"/>
                             <constraint firstItem="Mtv-oc-eFr" firstAttribute="top" secondItem="tnG-hI-8hf" secondAttribute="bottom" constant="49" id="Aa1-xc-q3m"/>
                             <constraint firstItem="Mtv-oc-eFr" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="PoA-qD-mjF"/>
+                            <constraint firstItem="lkE-dI-F6C" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="agn-FB-x3l"/>
                             <constraint firstItem="lkE-dI-F6C" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="506" id="etg-Qe-CKi"/>
                             <constraint firstItem="tnG-hI-8hf" firstAttribute="leading" secondItem="HBu-0H-PFT" secondAttribute="trailing" constant="73" id="fEo-by-f0p"/>
                             <constraint firstItem="tnG-hI-8hf" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="tRj-lh-wLE"/>
@@ -110,14 +123,17 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <connections>
-                        <outlet property="addButtonView" destination="Mtv-oc-eFr" id="uWh-ib-b4r"/>
                         <outlet property="fakeCircleImageView" destination="lkE-dI-F6C" id="H3Q-eQ-Hnf"/>
+                        <outlet property="firstButton" destination="HBu-0H-PFT" id="8U8-HA-0Si"/>
+                        <outlet property="plusButton" destination="Mtv-oc-eFr" id="bpi-UO-YQG"/>
+                        <outlet property="secondButton" destination="tnG-hI-8hf" id="6hK-ak-JyE"/>
+                        <outlet property="thirdButton" destination="e57-CI-XcF" id="hdG-3i-Nus"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
                 <exit id="e0O-le-ekc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="749.5" y="359.5"/>
+            <point key="canvasLocation" x="754.5" y="435.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Elb-Co-hy1">
@@ -163,7 +179,6 @@
                     </tabBar>
                     <connections>
                         <outlet property="customTabBar" destination="kJt-Hm-Ap2" id="8XU-29-kDI"/>
-                        <outlet property="popUpView" destination="uZK-d9-GEC" id="8uE-5M-gSN"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="hnP-pL-fBv"/>
                         <segue destination="8rJ-Kc-sve" kind="presentation" identifier="PresentPlusButtonSegue" id="DdD-r7-eiA"/>
                     </connections>
@@ -180,11 +195,6 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="underlineOnTop" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" id="uZK-d9-GEC" customClass="PlusPopUpView" customModule="AnimationsExploration_Welbe" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="1" green="0.0" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="36.5" y="44.5"/>
         </scene>
@@ -192,6 +202,7 @@
     <resources>
         <image name="add" width="40" height="40"/>
         <image name="first" width="30" height="30"/>
+        <image name="pinkCircle" width="391" height="158"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

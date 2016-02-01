@@ -43,7 +43,6 @@ class CustomTabBarController: UITabBarController, SegueHandlerType {
     
     // MARK: - Public properties
     
-    @IBOutlet var popUpView: PlusPopUpView!
     @IBOutlet var customTabBar: CustomTabBar!
     let animator = PinkAnimationController()
     
@@ -140,8 +139,7 @@ extension CustomTabBarController: CustomTabBarDelegate {
                 selectedIndex = 1
             case .Plus:
                 selectedIndex = customSelectedIndex
-                                performSegueWithIdentifier(SegueIdentifier.ShowPlusMenu, sender: self)
-//                animatePopUpView(up: !isPoppedUp)
+                performSegueWithIdentifier(SegueIdentifier.ShowPlusMenu, sender: self)
             case .Groups:
                 selectedIndex = 2
             case .Settings:
@@ -150,15 +148,6 @@ extension CustomTabBarController: CustomTabBarDelegate {
         }
     }
     
-}
-
-extension CustomTabBarController: PopUpViewDelegate {
-    func buttonPressed(buttonType: PopUpButtonType) {
-        switch buttonType {
-        case .LeftButton, .MiddleButton, .RightButton:
-            print("Button pressed with Type: \(buttonType)")
-        }
-    }
 }
 
 
@@ -174,21 +163,6 @@ private extension CustomTabBarController {
         customTabBar.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor).active = true
         customTabBar.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor).active = true
         customTabBar.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor).active = true
-    }
-    
-    func animatePopUpView(up up: Bool) {
-        if up {
-            view.addSubview(popUpView)
-            popUpView.delegate = self
-//            popUpView.translatesAutoresizingMaskIntoConstraints = false
-            view.addConstraint(popUpView.heightAnchor.constraintEqualToConstant(100))
-            view.addConstraint(popUpView.widthAnchor.constraintEqualToAnchor(tabBar.widthAnchor))
-            view.addConstraint(popUpView.leadingAnchor.constraintEqualToAnchor(tabBar.leadingAnchor))
-            view.addConstraint(popUpView.trailingAnchor.constraintEqualToAnchor(tabBar.trailingAnchor))
-            view.addConstraint(popUpView.topAnchor.constraintEqualToAnchor(tabBar.bottomAnchor))
-        } else {
-            popUpView.removeFromSuperview()
-        }
     }
 
 }
