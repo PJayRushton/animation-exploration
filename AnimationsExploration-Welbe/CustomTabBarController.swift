@@ -140,8 +140,8 @@ extension CustomTabBarController: CustomTabBarDelegate {
                 selectedIndex = 1
             case .Plus:
                 selectedIndex = customSelectedIndex
-                //                performSegueWithIdentifier(SegueIdentifier.ShowPlusMenu, sender: self)
-                animatePopUpView(up: !isPoppedUp)
+                                performSegueWithIdentifier(SegueIdentifier.ShowPlusMenu, sender: self)
+//                animatePopUpView(up: !isPoppedUp)
             case .Groups:
                 selectedIndex = 2
             case .Settings:

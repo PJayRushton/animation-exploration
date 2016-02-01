@@ -24,23 +24,23 @@ import UIKit
 
 class TransitionAnimationHelper: NSObject, UIViewControllerAnimatedTransitioning {
     
-    let duration    = 1.0
-    var presenting  = true
+    let duration = 1.0
+    
+    var presenting = true
     var originFrame = CGRect.zero
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return duration
     }
     
-    
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView()!
 
         let toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
-        let presentedView = presenting ? toView : transitionContext.viewForKey(UITransitionContextFromViewKey)!
+        let presentingView = presenting ? toView : transitionContext.viewForKey(UITransitionContextFromViewKey)!
         
-        let initialFrame = presenting ? originFrame : presentedView.frame
-        let finalFrame = presenting ? presentedView.frame : CGRectZero
+        let initialFrame = presenting ? originFrame : presentingView.frame
+        let finalFrame = presenting ? presentingView.frame : CGRectMake(presentingView.frame.width, 0, 0, 0)
         
         let xScaleFactor = presenting ? initialFrame.width / finalFrame.width : finalFrame.width / initialFrame.width
         
@@ -48,28 +48,27 @@ class TransitionAnimationHelper: NSObject, UIViewControllerAnimatedTransitioning
         
         let scaleTransform = CGAffineTransformMakeScale(xScaleFactor, yScaleFactor)
         
-//        if presenting {
-            presentedView.transform = scaleTransform
-            presentedView.center = CGPoint(x: CGRectGetMidX(initialFrame), y: CGRectGetMidY(initialFrame))
-            presentedView.clipsToBounds = true
-//        }
+        if presenting {
+            presentingView.transform = scaleTransform
+            presentingView.center = CGPoint(x: CGRectGetMidX(initialFrame), y: CGRectGetMidY(initialFrame))
+            presentingView.clipsToBounds = true
+        }
         
         containerView.addSubview(toView)
-        containerView.bringSubviewToFront(presentedView)
+        containerView.bringSubviewToFront(presentingView)
         
         UIView.animateWithDuration(duration, delay:0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0.0, options: [], animations: {
-            presentedView.transform = self.presenting ? CGAffineTransformIdentity : scaleTransform
-            presentedView.center = CGPoint(x: CGRectGetMidX(finalFrame), y: CGRectGetMidY(finalFrame))
-            
+            presentingView.transform = CGAffineTransformIdentity
+            presentingView.center = CGPoint(x: CGRectGetMidX(finalFrame), y: CGRectGetMidY(finalFrame))
             }, completion:{_ in
                 transitionContext.completeTransition(true)
         })
         
-//        let round = CABasicAnimation(keyPath: "cornerRadius")
-//        round.fromValue = presenting ? 20.0/xScaleFactor : 0.0
-//        round.toValue = presenting ? 0.0 : 20.0/xScaleFactor
-//        round.duration = duration / 2
-//        presentingView.layer.addAnimation(round, forKey: nil)
+        let round = CABasicAnimation(keyPath: "cornerRadius")
+        round.fromValue = presentingView.frame.size.width / 2
+        round.toValue = presenting ? 0.0 : presentingView.frame.size.width / 2
+        round.duration = duration / 2
+        presentingView.layer.addAnimation(round, forKey: nil)
 //        presentingView.layer.cornerRadius = presenting ? 0.0 : 20.0/xScaleFactor
     }
     
