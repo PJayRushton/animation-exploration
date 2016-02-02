@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -59,40 +58,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pinkCircle" translatesAutoresizingMaskIntoConstraints="NO" id="lkE-dI-F6C">
-                                <rect key="frame" x="-188.5" y="526" width="752" height="310"/>
-                                <color key="tintColor" red="1" green="0.0" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oze-FF-frR">
+                                <rect key="frame" x="0.0" y="526" width="375" height="141"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="lkE-dI-F6C" secondAttribute="height" multiplier="1:1" constant="442" id="KIN-cx-gDU"/>
-                                    <constraint firstAttribute="height" constant="310" id="enN-hr-iHo"/>
-                                    <constraint firstAttribute="width" constant="752" id="fY5-Bd-Q2j"/>
+                                    <constraint firstAttribute="height" constant="141" id="Ajr-o7-ZpY"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="KIN-cx-gDU"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBu-0H-PFT">
                                 <rect key="frame" x="69" y="561" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.88714754581451416" green="0.0" blue="0.29709124565124512" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="11">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnG-hI-8hf">
                                 <rect key="frame" x="172" y="544" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.88714754579999999" green="0.0" blue="0.29709124570000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="22">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="dfv-h9-VXX" kind="presentation" id="Emy-O8-Lus"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e57-CI-XcF">
                                 <rect key="frame" x="279" y="566" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.88714754579999999" green="0.0" blue="0.29709124570000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="33">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtv-oc-eFr">
                                 <rect key="frame" x="167" y="623" width="40" height="40"/>
@@ -110,12 +119,13 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="e57-CI-XcF" firstAttribute="top" secondItem="tnG-hI-8hf" secondAttribute="bottom" constant="-8" id="1iS-W2-fwN"/>
+                            <constraint firstItem="Oze-FF-frR" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="1u0-NZ-e3B"/>
                             <constraint firstItem="e57-CI-XcF" firstAttribute="leading" secondItem="tnG-hI-8hf" secondAttribute="trailing" constant="77" id="3bj-XG-KLE"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Mtv-oc-eFr" secondAttribute="bottom" constant="4" id="62K-XL-8D8"/>
                             <constraint firstItem="Mtv-oc-eFr" firstAttribute="top" secondItem="tnG-hI-8hf" secondAttribute="bottom" constant="49" id="Aa1-xc-q3m"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Oze-FF-frR" secondAttribute="bottom" id="FNy-Ky-vMD"/>
                             <constraint firstItem="Mtv-oc-eFr" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="PoA-qD-mjF"/>
-                            <constraint firstItem="lkE-dI-F6C" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="agn-FB-x3l"/>
-                            <constraint firstItem="lkE-dI-F6C" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="506" id="etg-Qe-CKi"/>
+                            <constraint firstAttribute="trailing" secondItem="Oze-FF-frR" secondAttribute="trailing" id="Qtf-iQ-c3x"/>
                             <constraint firstItem="tnG-hI-8hf" firstAttribute="leading" secondItem="HBu-0H-PFT" secondAttribute="trailing" constant="73" id="fEo-by-f0p"/>
                             <constraint firstItem="tnG-hI-8hf" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="tRj-lh-wLE"/>
                             <constraint firstItem="HBu-0H-PFT" firstAttribute="top" secondItem="tnG-hI-8hf" secondAttribute="bottom" constant="-13" id="wBn-Cw-VWJ"/>
@@ -123,10 +133,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <connections>
-                        <outlet property="fakeCircleImageView" destination="lkE-dI-F6C" id="H3Q-eQ-Hnf"/>
                         <outlet property="firstButton" destination="HBu-0H-PFT" id="8U8-HA-0Si"/>
                         <outlet property="plusButton" destination="Mtv-oc-eFr" id="bpi-UO-YQG"/>
                         <outlet property="secondButton" destination="tnG-hI-8hf" id="6hK-ak-JyE"/>
+                        <outlet property="shapeView" destination="Oze-FF-frR" id="TiH-pN-jIz"/>
                         <outlet property="thirdButton" destination="e57-CI-XcF" id="hdG-3i-Nus"/>
                     </connections>
                 </viewController>
@@ -202,7 +212,6 @@
     <resources>
         <image name="add" width="40" height="40"/>
         <image name="first" width="30" height="30"/>
-        <image name="pinkCircle" width="391" height="158"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>
