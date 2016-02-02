@@ -45,6 +45,7 @@ class CustomTabBarController: UITabBarController, SegueHandlerType {
     
     @IBOutlet var customTabBar: CustomTabBar!
     let animator = PinkAnimationController()
+    var useBlueAnimator = false
     
     var isPoppedUp: Bool = false
     
@@ -87,7 +88,14 @@ class CustomTabBarController: UITabBarController, SegueHandlerType {
         performSegueWithIdentifier(.ShowLogin, sender: nil)
     }
     
-    @IBAction func unwindToCustomTabBarController(segue: UIStoryboardSegue) { }
+    @IBAction func unwindToCustomTabBarController(segue: UIStoryboardSegue) {
+        print("Unwinding to tab from \(segue.sourceViewController)")
+        if let plusVC = presentedViewController as? PlusViewController {
+            plusVC.dismissViewControllerAnimated(true) {
+                self.dismissViewControllerAnimated(false, completion: nil)
+            }
+        }
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segueIdentifierForSegue(segue) {
@@ -108,7 +116,10 @@ class CustomTabBarController: UITabBarController, SegueHandlerType {
 extension CustomTabBarController: UIViewControllerTransitioningDelegate {
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
+
+        print("Presented : \(presented)")
+        print("Presenting: \(presenting)")
+        print("Source    : \(source)")
         animator.snapshotView = source.view.snapshotViewAfterScreenUpdates(false)
         animator.presenting = true
 
@@ -116,6 +127,11 @@ extension CustomTabBarController: UIViewControllerTransitioningDelegate {
     }
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if useBlueAnimator {
+            return nil
+        }
+
+        print("Pink Dismissed : \(dismissed)")
         animator.presenting = false
         return animator
     }

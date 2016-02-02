@@ -15,6 +15,7 @@ class PinkAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
     let duration = 0.3
 
     var presenting = true
+    var skipAnimations = false
     var originFrame = CGRect.zero
     var snapshotView: UIView?
 
@@ -44,7 +45,14 @@ class PinkAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
         } else {
             containerView?.insertSubview(toView, belowSubview: fromView)
         }
-        
+
+        if skipAnimations {
+            plusVC.shapeView.hidden = true
+            transitionContext.completeTransition(true)
+            skipAnimations = false
+            return
+        }
+
         UIView.animateWithDuration(duration, animations: {
             let finalAlpha: CGFloat = self.presenting ? 1 : 0
             plusVC.firstButton.alpha = finalAlpha

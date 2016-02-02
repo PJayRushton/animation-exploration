@@ -34,6 +34,7 @@ class PlusViewController: UIViewController {
 
     func enlargeCircleShape() {
         let circlePath = CGPathCreateMutable()
+        // TODO: Actual phone width, not 375
         CGPathAddEllipseInRect(circlePath, nil, CGRect(x: 375/2 - 1173/2, y: 0, width: 1173, height: 1173))
         CGPathCloseSubpath(circlePath)
         updateCircleShape(circlePath)
@@ -66,8 +67,25 @@ class PlusViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("Going to controller: \(segue.destinationViewController)")
+        if segue.identifier == "ShowBlueModal" {
+            segue.destinationViewController.transitioningDelegate = self
+        }
     }
 
 }
 
+
+// MARK: Transition Delegate
+extension PlusViewController: UIViewControllerTransitioningDelegate {
+
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+
+        return BlueOpenAnimationController()
+    }
+
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+
+        return BlueCloseAnimationController()
+    }
+    
+}

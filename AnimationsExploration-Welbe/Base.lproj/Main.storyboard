@@ -88,7 +88,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="dfv-h9-VXX" kind="presentation" id="Emy-O8-Lus"/>
+                                    <segue destination="dfv-h9-VXX" kind="presentation" identifier="ShowBlueModal" id="Emy-O8-Lus"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e57-CI-XcF">
@@ -145,10 +145,10 @@
             </objects>
             <point key="canvasLocation" x="754.5" y="435.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Blue View Controller-->
         <scene sceneID="Elb-Co-hy1">
             <objects>
-                <viewController id="dfv-h9-VXX" sceneMemberID="viewController">
+                <viewController id="dfv-h9-VXX" customClass="BlueViewController" customModule="AnimationsExploration_Welbe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nbu-0Z-isk"/>
                         <viewControllerLayoutGuide type="bottom" id="4Th-QG-PHw"/>
@@ -161,21 +161,28 @@
                                 <rect key="frame" x="317" y="28" width="30" height="30"/>
                                 <state key="normal" title="X"/>
                                 <connections>
-                                    <segue destination="5RK-KC-CNq" kind="unwind" unwindAction="unwindToCustomTabBarController:" id="HgX-lR-cJv"/>
+                                    <segue destination="5RK-KC-CNq" kind="unwind" identifier="PopToTab" unwindAction="unwindToCustomTabBarController:" id="HgX-lR-cJv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fz7-kE-gQU">
+                                <rect key="frame" x="166" y="207" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Fz7-kE-gQU" firstAttribute="top" secondItem="Nbu-0Z-isk" secondAttribute="bottom" constant="187" id="YIa-3L-emh"/>
                             <constraint firstItem="bFz-Ae-psI" firstAttribute="top" secondItem="Nbu-0Z-isk" secondAttribute="bottom" constant="8" id="kgp-wX-wWg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bFz-Ae-psI" secondAttribute="trailing" constant="8" id="l37-et-vad"/>
+                            <constraint firstItem="Fz7-kE-gQU" firstAttribute="centerX" secondItem="epL-km-LJE" secondAttribute="centerX" id="wpZ-Wf-dg7"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MxD-R5-7Rb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5RK-KC-CNq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1342" y="360"/>
+            <point key="canvasLocation" x="1342.5" y="435.5"/>
         </scene>
         <!--Custom Tab Bar Controller-->
         <scene sceneID="l5J-tc-hZt">

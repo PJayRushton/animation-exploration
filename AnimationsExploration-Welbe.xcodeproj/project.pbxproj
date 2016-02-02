@@ -19,6 +19,9 @@
 		A19CC91E1C5D1D5D0004AC5F /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19CC91D1C5D1D5D0004AC5F /* SegueHandlerType.swift */; };
 		A19CC9421C5D3EB30004AC5F /* TransitionAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19CC9411C5D3EB30004AC5F /* TransitionAnimationHelper.swift */; };
 		B0049D8C1C60099500DD165C /* PinkAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0049D8B1C60099500DD165C /* PinkAnimationController.swift */; };
+		B08AF0731C606C1400332A7F /* BlueOpenAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08AF0721C606C1400332A7F /* BlueOpenAnimationController.swift */; };
+		B08AF0751C607AEE00332A7F /* BlueCloseAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08AF0741C607AEE00332A7F /* BlueCloseAnimationController.swift */; };
+		B08AF0771C607E0D00332A7F /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08AF0761C607E0D00332A7F /* BlueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		A19CC91D1C5D1D5D0004AC5F /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
 		A19CC9411C5D3EB30004AC5F /* TransitionAnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimationHelper.swift; sourceTree = "<group>"; };
 		B0049D8B1C60099500DD165C /* PinkAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinkAnimationController.swift; sourceTree = "<group>"; };
+		B08AF0721C606C1400332A7F /* BlueOpenAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueOpenAnimationController.swift; sourceTree = "<group>"; };
+		B08AF0741C607AEE00332A7F /* BlueCloseAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueCloseAnimationController.swift; sourceTree = "<group>"; };
+		B08AF0761C607E0D00332A7F /* BlueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +81,11 @@
 				A19CC91D1C5D1D5D0004AC5F /* SegueHandlerType.swift */,
 				A19CC9071C5D1B800004AC5F /* FirstViewController.swift */,
 				A19CC9091C5D1B800004AC5F /* PlusViewController.swift */,
+				B08AF0761C607E0D00332A7F /* BlueViewController.swift */,
 				A19CC9411C5D3EB30004AC5F /* TransitionAnimationHelper.swift */,
 				B0049D8B1C60099500DD165C /* PinkAnimationController.swift */,
+				B08AF0721C606C1400332A7F /* BlueOpenAnimationController.swift */,
+				B08AF0741C607AEE00332A7F /* BlueCloseAnimationController.swift */,
 				36134AEA1C5FE2E2002D61D0 /* UIColor+Welbe.swift */,
 				A19CC90E1C5D1B800004AC5F /* Assets.xcassets */,
 				A19CC9101C5D1B800004AC5F /* LaunchScreen.storyboard */,
@@ -158,12 +167,15 @@
 			files = (
 				36134AEB1C5FE2E3002D61D0 /* UIColor+Welbe.swift in Sources */,
 				A19CC9421C5D3EB30004AC5F /* TransitionAnimationHelper.swift in Sources */,
+				B08AF0751C607AEE00332A7F /* BlueCloseAnimationController.swift in Sources */,
 				A19CC90A1C5D1B800004AC5F /* PlusViewController.swift in Sources */,
 				A19CC91C1C5D1D390004AC5F /* CustomTabBar.swift in Sources */,
 				A19CC9061C5D1B800004AC5F /* AppDelegate.swift in Sources */,
 				B0049D8C1C60099500DD165C /* PinkAnimationController.swift in Sources */,
+				B08AF0731C606C1400332A7F /* BlueOpenAnimationController.swift in Sources */,
 				A19CC91B1C5D1D390004AC5F /* CustomTabBarController.swift in Sources */,
 				A19CC91E1C5D1D5D0004AC5F /* SegueHandlerType.swift in Sources */,
+				B08AF0771C607E0D00332A7F /* BlueViewController.swift in Sources */,
 				A19CC9081C5D1B800004AC5F /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
