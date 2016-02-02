@@ -34,7 +34,7 @@ class PlusViewController: UIViewController {
 
     func enlargeCircleShape() {
         let circlePath = CGPathCreateMutable()
-        CGPathAddEllipseInRect(circlePath, nil, CGRect(x: 375/2 - 1173/2, y: 0, width: 1173, height: 476))
+        CGPathAddEllipseInRect(circlePath, nil, CGRect(x: 375/2 - 1173/2, y: 0, width: 1173, height: 1173))
         CGPathCloseSubpath(circlePath)
         updateCircleShape(circlePath)
     }
